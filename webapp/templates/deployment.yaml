@@ -31,6 +31,8 @@ spec:
                 fieldRef:
                   fieldPath: spec.nodeName
             {{- range $key, $value := .Values.env }}
+            - name: PORT
+              value: {{ .Values.containerPort | quote }}
             - name: {{ $key }}
               value: {{ $value | quote }}
             {{- end }}
