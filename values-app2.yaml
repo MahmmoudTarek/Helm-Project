@@ -1,0 +1,7 @@
+replicaCount: 2
+image:
+  repository: httpd
+  tag: "2.4"
+ingress:
+  enabled: true
+  host: app2.local

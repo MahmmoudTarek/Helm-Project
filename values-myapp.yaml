@@ -1,0 +1,13 @@
+replicaCount: 3
+image:
+  repository: mahmoudtarekkewan/myapp
+  tag: "1.0.0"
+  pullPolicy: IfNotPresent
+containerPort: 8080
+probes:
+  path: /healthz
+env:
+  APP_MESSAGE: "Hello from Docker Hub!"
+ingress:
+  enabled: true
+  host: myapp.local
